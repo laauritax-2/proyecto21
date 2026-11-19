@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #edf2ed;
+    color: #35483c;
+}
+
+.contenedor {
+    max-width: 650px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #496b58;
+}
+
+.descripcion {
+    color: #718176;
+}
+
+.temporizador, .progreso, .configuracion {
+    background-color: #ffffff;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 12px;
+    border: 1px solid #dce6dd;
+}
+
+body[data-tipo="corta"] {
+    background-color: #f0f3e9;
+}
+
+body[data-tipo="larga"] {
+    background-color: #eaf2f1;
+}
+
+.tipos, .botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 14px;
+    background-color: #dfe9e1;
+    color: #405849;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cbdccd;
+}
+
+.tipo.activo, #iniciar, #formulario button {
+    background-color: #71947d;
+    color: white;
+}
+
+#nombre-sesion {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+#reloj {
+    font-size: 62px;
+    font-weight: bold;
+    margin: 10px 0 22px;
+    color: #496b58;
+}
+
+#mensaje {
+    color: #718176;
+    margin-bottom: 0;
+}
+
+.barra {
+    height: 10px;
+    background-color: #e5ece6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progreso-barra {
+    width: 0%;
+    height: 100%;
+    background-color: #71947d;
+    transition: width 0.3s;
+}
+
+.configuracion form {
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.configuracion input {
+    padding: 9px;
+    border: 1px solid #cbd8ce;
+    border-radius: 6px;
+    margin-bottom: 7px;
+}
+
+.configuracion form button {
+    margin-top: 8px;
+}
+
+#aviso-configuracion {
+    color: #52745d;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .temporizador, .progreso, .configuracion {
+        padding: 16px 12px;
+    }
+
+    #reloj {
+        font-size: 52px;
+    }
+}
